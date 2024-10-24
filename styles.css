@@ -1,0 +1,113 @@
+/* Style général */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: black;
+    cursor: url('cursor.cur'), auto; /* Curseur personnalisé */
+}
+
+#container {
+    width: 100vw;
+    height: 100vh;
+    background-image: url('fond.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+/* Style du bouton "Let's go!" */
+#startButton {
+    position: absolute;
+    bottom: 20%;
+    left: 30%; /* <--- Modifie cette valeur pour changer l'emplacement horizontal (plus petite = plus à gauche) */
+    background-color: pink;
+    border: 2px solid #ff69b4;
+    border-radius: 50px;
+    padding: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+
+    #startButton {
+        font-size: 24px;
+        font-weight: bold;
+        color: rgb(255, 255, 255);
+        min-width: 150px; /* Largeur minimale */
+        max-width: 200px; /* Largeur maximale */
+        height: 50px; /* Hauteur fixe */
+        background-color: pink; /* Couleur de fond */
+        border-radius: 25px; /* Bords arrondis */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        position: absolute;
+        text-align: center;
+        transition: background-color 0.3s; /* Animation douce pour le changement de couleur */
+    }
+    
+    /* Optionnel : pour rendre le bouton plus interactif au survol */
+    #startButton:hover {
+        background-color: #ff99cc; /* Change la couleur au survol */
+    }
+
+    #startButton:hover {
+        background: linear-gradient(45deg, #ff6a88, #ff7eb3); /* Inverse le dégradé */
+        box-shadow: 0 10px 25px rgba(255, 105, 180, 0.6); /* Ombre renforcée */
+    }
+    
+    
+
+
+    
+
+#countdown {
+    font-size: 200px; /* Taille du texte */
+    font-weight: bold;
+    font-family: 'Baloo', cursive; /* Changer la police ici */
+    color: rgb(239, 10, 48);
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 33%; /* Centrage horizontal à 50% */
+    transform: translate(-50%, -50%); /* Centrage parfait */
+    width: 300px; /* Largeur fixe pour éviter le décalage des chiffres */
+    display: none;
+    letter-spacing: -10px; /* Ajuster l'espacement pour maintenir "000 !!!" sur une ligne */
+    white-space: nowrap; /* Empêche le texte de se déplacer sur plusieurs lignes */
+}
+
+
+/* Conteneur vidéo plein écran */
+#videoContainer {
+    display: none; /* Caché au départ */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    background: black;
+}
+
+#video {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+#confettiCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Permet de cliquer à travers le canvas */
+    display: none; /* Cacher par défaut */
+}
+
